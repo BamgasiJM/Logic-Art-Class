@@ -10,7 +10,7 @@ function setup() {
 }
 
 function draw() {
-  background(25, 80);
+  background(25, 8);
 
   let isMouseInside =
     mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height;
@@ -21,7 +21,7 @@ function draw() {
       let dir = p5.Vector.sub(mouse, mover.pos);
       let d = constrain(dir.mag(), 5, 25);
       dir.normalize();
-      let strength = (200 * mover.mass) / (d * d);
+      let strength = (20 * mover.mass) / (d * d);
       dir.mult(strength);
       mover.applyForce(dir);
     }
