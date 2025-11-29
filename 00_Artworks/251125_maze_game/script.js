@@ -1,7 +1,7 @@
 // p5.js 전용 스크립트 (자바스크립트만)
 // 미로 영역 고정: 1080 x 1080, 점수는 좌우, 트레일은 칸 중앙의 작은 원
 
-const GRID_SIZE = 10;
+const GRID_SIZE = 12;
 const MAZE_PIXEL = 1080; // 미로 영역을 1080x1080으로 고정
 const CELL_SIZE = MAZE_PIXEL / GRID_SIZE;
 const WALL_THICKNESS = 6;
@@ -38,7 +38,7 @@ function resetGame() {
     timerId = null;
   }
 
-  timeLeft = 60;
+  timeLeft = 45;
   scoreP1 = 0;
   scoreP2 = 0;
   trailsP1.clear();
@@ -283,8 +283,8 @@ function movePlayer(player, trails, otherTrails) {
 
 function checkCollision() {
   if (player1.x === player2.x && player1.y === player2.y) {
-    scoreP1 = max(0, scoreP1 - 5);
-    scoreP2 = max(0, scoreP2 - 5);
+    scoreP1 = max(0, scoreP1 - 1);
+    scoreP2 = max(0, scoreP2 - 1);
   }
 }
 

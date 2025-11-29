@@ -1,6 +1,6 @@
 // 전역 변수
 let particles = [];
-const PARTICLE_COUNT = 2400;
+const PARTICLE_COUNT = 2000;
 const YELLOW_PERCENTAGE = 0.01; // 초기 노란색 비율 (0~1)
 const CANVAS_SIZE = 1000;
 const BG_COLOR = 10;
@@ -21,7 +21,7 @@ function setup() {
       y: random(CANVAS_SIZE),
       vx: random(-1, 1),
       vy: random(-1, 1),
-      r: floor(random(5, 8)),
+      r: floor(random(3, 5)),
       isYellow: i < yellowCount,
     });
   }
