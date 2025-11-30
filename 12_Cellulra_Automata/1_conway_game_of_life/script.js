@@ -2,7 +2,7 @@
 let grid; // 현재 세대의 상태 (0: Dead, 1: Alive)
 let cols;
 let rows;
-let resolution = 10; // 셀 하나의 크기 (픽셀)
+let resolution = 5; // 셀 하나의 크기 (픽셀)
 
 function setup() {
   // 캔버스를 600x600으로 생성합니다.
@@ -12,9 +12,9 @@ function setup() {
   cols = floor(width / resolution);
   rows = floor(height / resolution);
 
-  // 시뮬레이션 속도를 조절합니다. (초당 10 프레임)
+  // 시뮬레이션 속도를 조절합니다. (초당 5 프레임)
   // 너무 빠르면 패턴 변화를 관찰하기 어렵습니다.
-  frameRate(10);
+  frameRate(5);
 
   // 초기 격자 상태를 설정하고 무작위로 생명체를 배치합니다.
   grid = initializeRandomGrid(cols, rows);
@@ -65,7 +65,7 @@ function drawGrid(currentGrid) {
 
       if (currentGrid[i][j] == 1) {
         // 생존한 셀 (Alive): 흰색
-        fill(255);
+        fill(200, 170, 80);
         stroke(20); // 셀 경계선은 배경색과 비슷하게 설정
         rect(x, y, resolution, resolution);
       } else {
