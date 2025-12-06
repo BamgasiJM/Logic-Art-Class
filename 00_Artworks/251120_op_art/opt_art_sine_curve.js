@@ -2,14 +2,14 @@
  * 위에서 아래로 내려오며 사인파(Sine Wave)를 그림
  */
 
-let yPos = 0; // Y축 시작 위치
-let angle = 0; // 사인파 계산을 위한 각도
-let amplitude = 100; // 진폭 (좌우로 흔들리는 폭)
-let frequency = 0.06; // 진동수 (곡선의 촘촘함)
+let yPos = 0;           // Y축 시작 위치
+let angle = 0;          // 사인파 계산을 위한 각도
+let amplitude = 100;    // 진폭 (좌우로 흔들리는 폭)
+let frequency = 0.06;   // 진동수 (곡선의 촘촘함)
 
 function setup() {
   createCanvas(800, 800);
-  background(25); // 어두운 회색
+  background(25);  
   rectMode(CENTER);
   noStroke();
 }
@@ -48,6 +48,6 @@ function draw() {
   pop();
 
   // 5. 변수 업데이트
-  yPos += 2;          // 아래로 내려가는 속도
-  angle += frequency; // 곡선의 흐름 속도
+  yPos += 2;            // 아래로 내려가는 속도
+  angle += frequency;   // 곡선의 흐름 속도
 }
