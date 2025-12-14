@@ -1,3 +1,5 @@
+// script_blue_noise.js
+
 let points = [];
 const POINT_COUNT = 4000;
 
@@ -10,7 +12,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(RGB, 255);
   background(20);
-    strokeWeight(2);
+  strokeWeight(2);
 
   baseColor = color(80, 140, 255); // 파랑
   whiteColor = color(255);

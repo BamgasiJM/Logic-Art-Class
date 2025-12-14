@@ -1,3 +1,5 @@
+// script_red_rotating.js
+
 let points = [];
 const POINT_COUNT = 8000;
 
@@ -11,8 +13,8 @@ function setup() {
   background(10);
   strokeWeight(2);
 
-  baseColor = color(255, 80, 40); 
-  fastColor = color(245, 200, 100); 
+  baseColor = color(255, 80, 40);
+  fastColor = color(245, 200, 100);
 
   for (let i = 0; i < POINT_COUNT; i++) {
     let r0 = random(80, width * 0.45);
@@ -23,7 +25,6 @@ function setup() {
       angle: random(TWO_PI),
       angularSpeed: random(0.005, 0.01),
       collapse: random(0.0005, 0.0015),
-
       // 폭발용
       burstSpeed: 0,
       noiseOffset: random(1000),
