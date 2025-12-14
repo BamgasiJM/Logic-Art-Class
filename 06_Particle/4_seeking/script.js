@@ -4,7 +4,7 @@ let NUM_AGENTS = 80;
 let agents = [];
 
 function setup() {
-  createCanvas(800, 400);
+  createCanvas(3000, 1400);
   background(25);  // 캔버스를 깨끗하게 시작
 
   for (let i = 0; i < NUM_AGENTS; i++) {

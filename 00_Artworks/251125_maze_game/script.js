@@ -1,8 +1,8 @@
 // p5.js 전용 스크립트 (자바스크립트만)
 // 미로 영역 고정: 1080 x 1080, 점수는 좌우, 트레일은 칸 중앙의 작은 원
 
-const GRID_SIZE = 12;
-const MAZE_PIXEL = 1080; // 미로 영역을 1080x1080으로 고정
+const GRID_SIZE = 16;
+const MAZE_PIXEL = 1200; // 미로 영역을 1080x1080으로 고정
 const CELL_SIZE = MAZE_PIXEL / GRID_SIZE;
 const WALL_THICKNESS = 6;
 

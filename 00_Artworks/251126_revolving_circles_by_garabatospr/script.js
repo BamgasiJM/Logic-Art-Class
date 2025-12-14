@@ -5,7 +5,7 @@ let ringCache = {};
 
 function setup() {
   createCanvas(1000, 1000);
-  // createCanvas(windowWidth, windowWidth);
+  // createCanvas(windowWidth, windowHeight);
 
   rectMode(CENTER);
   ellipseMode(CENTER);
