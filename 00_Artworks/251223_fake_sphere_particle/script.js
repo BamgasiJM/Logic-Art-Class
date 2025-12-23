@@ -2,18 +2,18 @@
 // [설정 영역] 전역 상수 및 변수
 // ==========================================
 
-const PARTICLE_COUNT = 1000; // 파티클 개수
-const ATTRACTION = 0.01; // 원래 위치로 끌어당기는 힘
-const DAMPING = 0.9; // 마찰력 (부드러운 움직임)
-const REPEL_STRENGTH = 28; // 마우스 반발력 강도
+const PARTICLE_COUNT = 8000; 
+const ATTRACTION = 0.01; 
+const DAMPING = 0.9; 
+const REPEL_STRENGTH = 28; 
 
-const CANVAS_WIDTH = 800; // 캔버스 너비
-const CANVAS_HEIGHT = 800; // 캔버스 높이
-const SPHERE_RADIUS = 350; // 구체 반지름
-const REPEL_RADIUS = 120; // 마우스 반발 영향 범위
+const CANVAS_WIDTH = 800; 
+const CANVAS_HEIGHT = 800; 
+const SPHERE_RADIUS = 350; 
+const REPEL_RADIUS = 120; 
 
-let angle = 0; // 구체 회전 각도
-let points = []; // 파티클 배열
+let angle = 0; 
+let points = []; 
 
 // ==========================================
 // [p5.js 라이프사이클]
