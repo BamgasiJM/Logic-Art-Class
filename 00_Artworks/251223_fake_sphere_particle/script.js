@@ -4,8 +4,8 @@
 
 const PARTICLE_COUNT = 8000; 
 const ATTRACTION = 0.01; 
-const DAMPING = 0.9; 
-const REPEL_STRENGTH = 28; 
+const DAMPING = 0.8; 
+const REPEL_STRENGTH = 38; 
 
 const CANVAS_WIDTH = 800; 
 const CANVAS_HEIGHT = 800; 

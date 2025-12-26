@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.1.2/lib/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      canvas {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: 'Courier New', sans-serif; 
+      font-size: 11px;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    .sketch-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background: #111;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="container-2d" class="sketch-container">
+      <div class="label">p5.js 2.1.2 :: 2D NOISE</div>
+    </div>
+
+    <div id="container-3d" class="sketch-container">
+      <div class="label">p5.js 2.1.2 :: WEBGL2 WAVE</div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
