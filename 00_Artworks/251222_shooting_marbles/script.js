@@ -174,7 +174,7 @@ function updateEnemies() {
 
     // 바닥 충돌 체크 - 게임오버
     if (e.y >= height - CONFIG.ENEMY.BOTTOM_THRESHOLD) {
-      gameState.gameOver = true;
+      gameState.gameOver = false;
       return;
     }
   }
