@@ -2,8 +2,8 @@ let particles = [];
 let attractMode = true; // true면 끌림, false면 밀어냄
 
 function setup() {
-  createCanvas(3000, 1400);
-  for (let i = 0; i < 3500; i++) {
+  createCanvas(800, 800);
+  for (let i = 0; i < 1500; i++) {
     particles.push(new Particle(random(width), random(height)));
   }
 }
