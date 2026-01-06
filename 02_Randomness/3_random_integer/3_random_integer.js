@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() {
-  // 색상 팔레트 정의 (불투명도 추가)
+  // 색상 팔레트 정의
   let palette = [
     color(255, 240, 0, 180),
     color(255, 200, 0, 180),
