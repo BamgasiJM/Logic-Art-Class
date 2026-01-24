@@ -2,11 +2,11 @@
 // https://www.youtube.com/watch?v=VyXxSNcgDtg
 
 let molds = [];             // Mold 객체를 저장할 배열
-let num = 4000;             // 생성할 Mold 객체의 개수
+let num = 8000;             // 생성할 Mold 객체의 개수
 let d;                      // pixelDensity() 값을 저장할 변수
 
 function setup() {
-  createCanvas(400, 400);   // 400x400 픽셀 캔버스 생성
+  createCanvas(800, 800);   // 400x400 픽셀 캔버스 생성
   angleMode(DEGREES);       // 각도를 도(degree)로 설정
   d = pixelDensity();       // 디스플레이의 픽셀 밀도를 저장
 
