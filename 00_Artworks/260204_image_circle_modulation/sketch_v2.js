@@ -1,6 +1,6 @@
 let img;
-let gridCols = 50;
-let gridRows = 50;
+let gridCols = 80;
+let gridRows = 80;
 let cellW, cellH;
 let levels = [];
 let imgReady = false;
@@ -14,7 +14,7 @@ function setup() {
   background(0);
   noStroke();
 
-  loadImage("../../assets/sticker_lara_026.png", (loadedImg) => {
+  loadImage("../../assets/sticker_lara_006.png", (loadedImg) => {
     img = loadedImg;
 
     // 비율 유지: 긴 쪽을 1000으로 맞추기
@@ -78,12 +78,12 @@ function draw() {
 
     // 반경 n px 가우시안 효과
     if (d < 150) {
-      let influence = exp(-pow(d, 2) / (2 * pow(100, 2))); // σ=100
+      let influence = exp(-pow(d, 2) / (2 * pow(50, 2))); // σ=100
       size = lerp(p.baseSize, 10, influence);
 
       // Repulsion 힘 추가
       let angle = atan2(p.y - mouseY, p.x - mouseX);
-      let force = (150 - d) * 0.005; // 가까울수록 강하게 밀림
+      let force = (150 - d) * 0.01; // 가까울수록 강하게 밀림
       p.vx += cos(angle) * force;
       p.vy += sin(angle) * force;
     }
@@ -91,8 +91,8 @@ function draw() {
     // 원래 자리로 돌아오도록 복원력
     let dx = p.ox - p.x;
     let dy = p.oy - p.y;
-    p.vx += dx * 0.01; // 복원력
-    p.vy += dy * 0.01;
+    p.vx += dx * 0.1; // 복원력
+    p.vy += dy * 0.1;
 
     // 댐핑
     p.vx *= 0.9;
@@ -103,7 +103,7 @@ function draw() {
     p.y += p.vy;
 
     // 점 그리기
-    fill(200, 160, 255);
+    fill(200, 190, 55);
     ellipse(p.x, p.y, size, size);
   }
 }

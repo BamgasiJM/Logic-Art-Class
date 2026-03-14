@@ -1,6 +1,6 @@
 let img;
-let gridCols = 50;
-let gridRows = 50;
+let gridCols = 80;
+let gridRows = 80;
 let cellW, cellH;
 let levels = [];
 let imgReady = false;
@@ -11,7 +11,7 @@ function setup() {
   background(0);
   noStroke();
 
-  loadImage("../../assets/sticker_lara_026.png", (loadedImg) => {
+  loadImage("../../assets/sticker_lara_006.png", (loadedImg) => {
     img = loadedImg;
 
     // 비율 유지: 긴 쪽을 1000으로 맞추기
@@ -61,15 +61,15 @@ function draw() {
       let cy = offsetY + y * cellH + cellH / 2;
       let baseSize = levels[y][x];
 
-      // 마우스 호버 반경 100px 가우시안 효과
+      // 마우스 호버 반경 300px 가우시안 효과
       let d = dist(mouseX, mouseY, cx, cy);
       let size = baseSize;
-      if (d < 100) {
-        let influence = exp(-pow(d, 2) / (2 * pow(30, 2))); // σ=30
-        size = lerp(baseSize, 5, influence);
+      if (d < 300) {
+        let influence = exp(-pow(d, 1.8) / (2 * pow(30, 2))); // σ=30
+        size = lerp(baseSize, 10, influence);
       }
 
-      fill(255);
+      fill(80, 200, 180);
       ellipse(cx, cy, size, size);
     }
   }

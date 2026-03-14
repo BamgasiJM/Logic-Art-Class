@@ -1,14 +1,12 @@
 let img;
-const detail = 6;
+const detail = 10;
 let particles = [];
 let grid = [];
 let particleImage;
 let ctx;
 
 function preload() {
-  img = loadImage(
-    "./image_01.jpg"
-  );
+  img = loadImage("./number_8.jpg");
 }
 
 class Particle {
@@ -17,7 +15,7 @@ class Particle {
     this.y = y || random(height);
     this.prevX = this.x;
     this.speed = 0;
-    this.v = random(0, 0.7);
+    this.v = random(0, 0.5);
   }
 
   update() {
@@ -43,9 +41,9 @@ function setup() {
 
   // 파티클 이미지 생성
   particleImage = createGraphics(6, 6);
-  particleImage.fill(255, 200, 60);
+  particleImage.fill(255, 210);
   particleImage.noStroke();
-  particleImage.circle(4, 4, 4);
+  particleImage.circle(3, 3, 3);
 
   windowResized();
 }
@@ -87,7 +85,7 @@ function initializeEffect() {
   }
 
   // 파티클 생성 (개수가 변해도 균등 분포))
-  const particleCount = 8000;
+  const particleCount = 16000;
   particles = [];
   for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle(null, (i / particleCount) * height));
