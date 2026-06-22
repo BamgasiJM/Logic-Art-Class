@@ -1,0 +1,207 @@
+/* ============================================================
+   SCATTER — style.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ui-bg: rgba(8, 8, 12, 0.82);
+  --ui-border: rgba(255, 255, 255, 0.08);
+  --ui-accent: #e8d5a3;
+  --ui-text: rgba(220, 220, 230, 0.75);
+  --ui-label: rgba(160, 160, 175, 0.55);
+  --ui-input-bg: rgba(255, 255, 255, 0.04);
+  --ui-hover: rgba(255, 255, 255, 0.07);
+  --radius: 2px;
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-display: 'Bebas Neue', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #050508;
+  overflow: hidden;
+}
+
+/* ── Canvas ─────────────────────────────────────────── */
+
+#canvas {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ── UI Panel ────────────────────────────────────────── */
+
+#ui {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 210px;
+  height: 100%;
+  background: var(--ui-bg);
+  border-left: 1px solid var(--ui-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 28px 20px 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: var(--font-mono);
+  z-index: 10;
+}
+
+/* ── Title block ─────────────────────────────────────── */
+
+#title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--ui-border);
+  padding-bottom: 20px;
+}
+
+#artwork-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  letter-spacing: 0.12em;
+  color: var(--ui-accent);
+  line-height: 1;
+}
+
+#artwork-sub {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: var(--ui-label);
+  text-transform: uppercase;
+}
+
+/* ── Controls ────────────────────────────────────────── */
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.ctrl-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ctrl-row label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--ui-label);
+}
+
+.ctrl-row input[type="number"],
+.ctrl-row select {
+  width: 100%;
+  background: var(--ui-input-bg);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--radius);
+  color: var(--ui-text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 7px 9px;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.ctrl-row input[type="number"]:focus,
+.ctrl-row select:focus {
+  border-color: rgba(232, 213, 163, 0.4);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.ctrl-row select option {
+  background: #10101a;
+  color: #ddd;
+}
+
+/* ── Range slider ────────────────────────────────────── */
+
+.ctrl-row input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  background: var(--ui-border);
+  border-radius: 2px;
+  outline: none;
+  margin-top: 6px;
+}
+
+.ctrl-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ui-accent);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s;
+}
+
+.ctrl-row input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-input-bg);
+  color: var(--ui-text);
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+#btn-run {
+  border-color: rgba(232, 213, 163, 0.35);
+  color: var(--ui-accent);
+  margin-top: 4px;
+}
+
+#btn-run:hover {
+  background: rgba(232, 213, 163, 0.1);
+}
+
+#btn-save:hover {
+  background: var(--ui-hover);
+}
+
+/* ── Info block ──────────────────────────────────────── */
+
+#info-block {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ui-border);
+}
+
+#fps-display {
+  font-size: 10px;
+  color: var(--ui-label);
+  letter-spacing: 0.12em;
+}

@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "name": "logic_art_class",
+  "color": "",
+  "dockState": {
+    "zones": {
+      "left": {
+        "position": "left",
+        "visible": false,
+        "size": 260,
+        "layout": null
+      },
+      "right": {
+        "position": "right",
+        "visible": false,
+        "size": 260,
+        "layout": null
+      },
+      "bottom": {
+        "position": "bottom",
+        "visible": false,
+        "size": 240,
+        "layout": null
+      },
+      "center": {
+        "position": "center",
+        "visible": true,
+        "size": 0,
+        "layout": {
+          "type": "tabs",
+          "id": "0db6c3cb-5841-4795-aa93-8d54a439e192",
+          "panelIds": [
+            "c9342aac-eef0-49ea-a4ca-10361606c387"
+          ],
+          "activeIndex": 0
+        }
+      }
+    },
+    "locations": {
+      "c9342aac-eef0-49ea-a4ca-10361606c387": {
+        "type": "dock",
+        "zone": "center",
+        "stackId": "0db6c3cb-5841-4795-aa93-8d54a439e192"
+      }
+    }
+  },
+  "panels": {
+    "ae7ff3b6-199d-4b4f-a2e9-f98c9d32b9a1": {
+      "type": "terminal",
+      "title": "jaikim@Jais-MacBook-Pro:~/Documents/dev/logic_art_class"
+    },
+    "c47070dc-78b5-49b9-9469-f6d56c20eff0": {
+      "type": "editor",
+      "title": "1_uniform_random.js •",
+      "filePath": "02_Randomness/1_uniform_random/1_uniform_random.js"
+    },
+    "71b0e3a2-9412-4336-a081-62b1c245f470": {
+      "type": "editor",
+      "title": "script.js",
+      "filePath": "00_Artworks/251126_particle_contagion/script.js"
+    },
+    "c9342aac-eef0-49ea-a4ca-10361606c387": {
+      "type": "canvas",
+      "title": "Canvas"
+    }
+  },
+  "canvases": {
+    "c9342aac-eef0-49ea-a4ca-10361606c387": {
+      "id": "c9342aac-eef0-49ea-a4ca-10361606c387",
+      "canvasNodes": {
+        "a141be30-7374-4153-b6ec-3a5844f892f9": {
+          "id": "a141be30-7374-4153-b6ec-3a5844f892f9",
+          "panelId": "ae7ff3b6-199d-4b4f-a2e9-f98c9d32b9a1",
+          "origin": {
+            "x": 250,
+            "y": 355.5
+          },
+          "size": {
+            "width": 640,
+            "height": 400
+          },
+          "zOrder": 4,
+          "creationIndex": 0,
+          "animationState": "idle",
+          "dockLayout": {
+            "type": "tabs",
+            "id": "547959df-54f9-4168-879d-d43bbec9e1b3",
+            "panelIds": [
+              "ae7ff3b6-199d-4b4f-a2e9-f98c9d32b9a1"
+            ],
+            "activeIndex": 0
+          }
+        },
+        "a7583b27-26a6-4026-9db0-585696344f0e": {
+          "id": "a7583b27-26a6-4026-9db0-585696344f0e",
+          "panelId": "c47070dc-78b5-49b9-9469-f6d56c20eff0",
+          "origin": {
+            "x": 260,
+            "y": 800
+          },
+          "size": {
+            "width": 600,
+            "height": 500
+          },
+          "zOrder": 3,
+          "creationIndex": 1,
+          "animationState": "idle",
+          "dockLayout": {
+            "type": "tabs",
+            "id": "3e81643a-a77e-45c8-9199-fa7950e2cfe4",
+            "panelIds": [
+              "c47070dc-78b5-49b9-9469-f6d56c20eff0"
+            ],
+            "activeIndex": 0
+          }
+        },
+        "f7efd5c4-0439-4e18-a04d-b21731b8e13f": {
+          "id": "f7efd5c4-0439-4e18-a04d-b21731b8e13f",
+          "panelId": "71b0e3a2-9412-4336-a081-62b1c245f470",
+          "origin": {
+            "x": 300,
+            "y": 1360
+          },
+          "size": {
+            "width": 600,
+            "height": 1860
+          },
+          "zOrder": 12,
+          "creationIndex": 3,
+          "animationState": "idle",
+          "dockLayout": {
+            "type": "tabs",
+            "id": "b71620a1-5176-40e8-b6ab-e70b8d61e023",
+            "panelIds": [
+              "71b0e3a2-9412-4336-a081-62b1c245f470"
+            ],
+            "activeIndex": 0
+          }
+        }
+      },
+      "zoomLevel": 1.4440268707774209,
+      "viewportOffset": {
+        "x": -283.34185391218193,
+        "y": -3415.8249156501643
+      }
+    }
+  }
+}

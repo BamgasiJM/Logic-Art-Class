@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scatter — Generative Art</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div id="ui">
+    <div id="title-block">
+      <span id="artwork-title">SCATTER</span>
+      <span id="artwork-sub">Generative Art</span>
+    </div>
+    <div id="controls">
+      <div class="ctrl-row">
+        <label for="seed-input">SEED</label>
+        <input id="seed-input" type="number" value="42" min="1" max="999999" />
+      </div>
+      <div class="ctrl-row">
+        <label for="count-input">PARTICLES</label>
+        <input id="count-input" type="number" value="80" min="10" max="300" />
+      </div>
+      <div class="ctrl-row">
+        <label for="palette-select">PALETTE</label>
+        <select id="palette-select">
+          <option value="ember">Ember</option>
+          <option value="arctic">Arctic</option>
+          <option value="neon">Neon</option>
+          <option value="mono">Mono</option>
+          <option value="sakura">Sakura</option>
+        </select>
+      </div>
+      <div class="ctrl-row">
+        <label for="trail-input">TRAIL</label>
+        <input id="trail-input" type="range" min="0.01" max="0.12" step="0.005" value="0.03" />
+      </div>
+      <button id="btn-run">GENERATE</button>
+      <button id="btn-save">SAVE PNG</button>
+    </div>
+    <div id="info-block">
+      <span id="fps-display">— FPS</span>
+    </div>
+  </div>
+
+  <script src="prng.js"></script>
+  <script src="palettes.js"></script>
+  <script src="ball.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
